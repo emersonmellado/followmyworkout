@@ -8,6 +8,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem "autoprefixer-rails"
 gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'sqlite3'
+gem 'jquery-ui-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

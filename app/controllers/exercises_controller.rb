@@ -3,7 +3,7 @@ class ExercisesController < ApplicationController
   before_action :set_exercise, except: [:index, :new, :create]
 
   def index
-
+    @exercises = current_user.exercises.all
   end
 
   def show
@@ -21,7 +21,7 @@ class ExercisesController < ApplicationController
       redirect_to [current_user, @exercise]
     else
       flash[:danger] = "Exercise has not been created"
-      render :new
+      render 'new'
     end
   end
 
@@ -38,7 +38,7 @@ class ExercisesController < ApplicationController
   private
 
   def exercise_params
-    params.require(:exercise).permit(:duration_in_min, :workout, :wortout_date, :user_id)
+    params.require(:exercise).permit(:duration_in_min, :workout, :workout_date, :user_id)
   end
 
   def set_exercise

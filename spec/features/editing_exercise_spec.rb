@@ -17,7 +17,7 @@ RSpec.feature "Editing Exercises" do
     link = "a[href='/users/#{@owner.id}/exercises/#{@owner_exer.id}/edit']"
     find(link).click
     fill_in "Duration", with: 50
-    click_button "Update Exercises"
+    click_button "Update Exercise"
 
     expect(page).to have_content("Exercise has been updated")
     expect(page).to have_content(50)
